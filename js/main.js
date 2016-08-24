@@ -34,6 +34,8 @@
 	var particleGround = function() {
 		$('#fh5co-home').particleground({
 			parallax: true,
+			dotColor: '#949BB5',
+			lineColor: '#949BB5'
 		});
 	}
 

@@ -20,8 +20,8 @@ $brand-black: #000 !default;
 $input-border-focus:  $brand-primary !default;
 $form-group-margin-bottom:       30px !default;
 
-// $font-primary: 'Playfair Display', serif;
-// $font-secondary: 'Merriweather', serif;;
+$font-primary: 'Playfair Display', serif;
+$font-secondary: 'Merriweather', serif;;
 
 // Mixin
 @mixin transition($transition, $ease: ease) {
@@ -283,17 +283,16 @@ p {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
-  color: #fff !important;
+  h1 {
+    color: #fff;
+  }
 }
 
 #fh5co-home {
 	min-height: 300px;
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: center center;
-	-webkit-box-shadow: inset -1px -11px 21px -15px rgba(0,0,0,0.75);
-	-moz-box-shadow: inset -1px -11px 21px -15px rgba(0,0,0,0.75);
-	box-shadow: inset -1px -11px 21px -15px rgba(0,0,0,0.75);
+	background-position: 50% 50% !important;
 	position: relative;
 	> .container {
 		position: relative;
