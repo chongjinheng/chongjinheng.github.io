@@ -1,17 +1,17 @@
 ;(function () {
-	
+
 	'use strict';
 
 
 
-	// iPad and iPod detection	
+	// iPad and iPod detection
 	var isiPad = function(){
 		return (navigator.platform.indexOf("iPad") != -1);
 	};
 
 	var isiPhone = function(){
 	    return (
-			(navigator.platform.indexOf("iPhone") != -1) || 
+			(navigator.platform.indexOf("iPhone") != -1) ||
 			(navigator.platform.indexOf("iPod") != -1)
 	    );
 	};
@@ -29,6 +29,13 @@
 	var loaderPage = function() {
 		$(".fh5co-loader").fadeOut("slow");
 	};
+
+	// Particle ground effect
+	var particleGround = function() {
+		$('#fh5co-home').particleground({
+			parallax: true,
+		});
+	}
 
 	var fh5coTabs = function() {
 		// $('.fh5co-tabs-container').
@@ -80,7 +87,7 @@
 	};
 
 	var mainMenuSticky = function() {
-		
+
 		var sticky = $('.js-sticky');
 
 		sticky.css('height', sticky.height());
@@ -89,9 +96,9 @@
 		});
 
 		var $section = $('.fh5co-main-nav');
-		
+
 		$section.waypoint(function(direction) {
-		  	
+
 		  	if (direction === 'down') {
 
 			    	$section.css({
@@ -116,7 +123,7 @@
 		});
 
 	};
-	
+
 	// Parallax
 	var parallax = function() {
 
@@ -155,7 +162,7 @@
 
 			var scrollPos = $(this).scrollTop();
 
-			
+
 		   if ( $('body').hasClass('offcanvas-visible') ) {
 		   	$('body').removeClass('offcanvas-visible');
 		   	$('.js-fh5co-nav-toggle').removeClass('active');
@@ -169,7 +176,7 @@
 		   	$('.js-fh5co-nav-toggle').removeClass('active');
 		   }
 		});
-		
+
 	};
 
 	// Click outside of offcanvass
@@ -183,10 +190,10 @@
 
     			$('body').removeClass('offcanvas-visible');
     			$('.js-fh5co-nav-toggle').removeClass('active');
-				
+
 	    	}
-	    
-	    	
+
+
 	    }
 		});
 
@@ -195,13 +202,13 @@
 	var goToTop = function() {
 
 		$('.js-gotop').on('click', function(event){
-			
+
 			event.preventDefault();
 
 			$('html, body').animate({
 				scrollTop: $('html').offset().top
 			}, 500, 'easeInOutExpo');
-			
+
 			return false;
 		});
 
@@ -215,7 +222,7 @@
 			}
 
 		});
-	
+
 	};
 
 
@@ -224,7 +231,7 @@
 		var topVal = ( $(window).width() < 769 ) ? 0 : 58;
 
 		$(window).resize(function(){
-			topVal = ( $(window).width() < 769 ) ? 0 : 58;		
+			topVal = ( $(window).width() < 769 ) ? 0 : 58;
 		});
 		$('.fh5co-main-nav a:not([class="external"]), #fh5co-offcanvas a:not([class="external"])').click(function(event){
 			var section = $(this).data('nav-section');
@@ -233,8 +240,8 @@
 
 					$('html, body').animate({
 			        	scrollTop: $('div[data-section="' + section + '"]').offset().top - topVal
-			    	}, 500, 'easeInOutExpo');	
-			    	
+			    	}, 500, 'easeInOutExpo');
+
 			   }
 
 		    event.preventDefault();
@@ -247,16 +254,16 @@
 
 	// Reflect scrolling in navigation
 	var navActive = function(section) {
-		
+
 		$('.fh5co-main-nav a[data-nav-section], #fh5co-offcanvas a[data-nav-section]').removeClass('active');
 		$('.fh5co-main-nav, #fh5co-offcanvas').find('a[data-nav-section="'+section+'"]').addClass('active');
-		
+
 	};
 
 	var navigationSection = function() {
 
 		var $section = $('div[data-section]');
-		
+
 		$section.waypoint(function(direction) {
 		  	if (direction === 'down') {
 		    	navActive($(this.element).data('section'));
@@ -277,7 +284,7 @@
 	};
 
 
-	
+
 
 
 	// Document on load.
@@ -285,6 +292,7 @@
 
 		fullHeight();
 		loaderPage();
+		particleGround();
 		fh5coTabs();
 		gridAutoHeight();
 
