@@ -371,6 +371,22 @@ p {
 		}
 	}
 }
+.main-nav-leavehome {
+  background: $brand-white !important;
+  .container{
+    .fh5co-menu-1{
+      a {
+        &.active {
+          font-weight: 400;
+          color: $brand-black;
+        }
+      }
+    }
+  }
+
+
+}
+
 .fh5co-main-nav {
 	position: relative;
 	background: rgba(0, 0, 0, 0.00);
@@ -392,15 +408,14 @@ p {
 			text-transform: uppercase;
 			letter-spacing: 2px;
 			font-size: 13px;
-			font-weight: 400;
+			font-weight: 500;
 			@include inline-block;
 			&:hover, &:focus, &:active {
 				outline: none;
 				text-decoration: none;
 			}
 			&.active {
-				font-weight: 400;
-				color: $brand-black;
+				color: $brand-white;
 			}
 		}
 	}

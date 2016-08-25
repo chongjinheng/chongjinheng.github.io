@@ -325,6 +325,15 @@ p {
   text-decoration: none;
 }
 
+.main-nav-leavehome {
+  background: #fff !important;
+}
+
+.main-nav-leavehome .container .fh5co-menu-1 a.active {
+  font-weight: 400;
+  color: #000;
+}
+
 .fh5co-main-nav {
   position: relative;
   background: transparent;
@@ -350,7 +359,7 @@ p {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 13px;
-  font-weight: 400;
+  font-weight: 500;
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
@@ -363,8 +372,7 @@ p {
 }
 
 .fh5co-main-nav .fh5co-menu-1 a.active {
-  font-weight: 400;
-  color: #000;
+  color: #fff;
 }
 
 .fh5co-main-nav .fh5co-menu-1 {
