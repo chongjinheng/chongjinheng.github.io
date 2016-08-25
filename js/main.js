@@ -1,10 +1,6 @@
 ;
 (function() {
-
     'use strict';
-
-
-
     // iPad and iPod detection
     var isiPad = function() {
         return (navigator.platform.indexOf("iPad") != -1);
@@ -80,11 +76,8 @@
         $('body').prepend('<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>');
 
         $('.fh5co-main-nav .fh5co-menu-1 a, .fh5co-main-nav .fh5co-menu-2 a').each(function() {
-
             var $this = $(this);
-
             $('#fh5co-offcanvas').append($this.clone());
-
         });
         // $('#fh5co-offcanvas').append
     };
@@ -92,7 +85,6 @@
     var mainMenuSticky = function() {
 
         $('.sticky').scrollToFixed();
-
         $(window).scroll(function() {
 
             if ($(window).scrollTop() > 1) {
@@ -115,13 +107,6 @@
         });
     };
 
-    // Parallax
-    var parallax = function() {
-
-
-    };
-
-
     // Burger Menu
     var burgerMenu = function() {
 
@@ -136,11 +121,8 @@
                 $('body').addClass('offcanvas-visible fh5co-overflow');
                 $this.addClass('active');
             }
-
             event.preventDefault();
-
         });
-
     };
 
     var scrolledWindow = function() {
@@ -148,13 +130,10 @@
         $(window).scroll(function() {
 
             var scrollPos = $(this).scrollTop();
-
-
             if ($('body').hasClass('offcanvas-visible')) {
                 $('body').removeClass('offcanvas-visible');
                 $('.js-fh5co-nav-toggle').removeClass('active');
             }
-
         });
 
         $(window).resize(function() {
@@ -163,7 +142,6 @@
                 $('.js-fh5co-nav-toggle').removeClass('active');
             }
         });
-
     };
 
     // Click outside of offcanvass
@@ -177,13 +155,9 @@
 
                     $('body').removeClass('offcanvas-visible');
                     $('.js-fh5co-nav-toggle').removeClass('active');
-
                 }
-
-
             }
         });
-
     };
 
     var goToTop = function() {
@@ -207,9 +181,7 @@
             } else {
                 $('.js-top').removeClass('active');
             }
-
         });
-
     };
 
     // Page Nav
@@ -229,9 +201,7 @@
                 }, 500, 'easeInOutExpo');
 
             }
-
             event.preventDefault();
-
             // return false;
         });
 
@@ -271,26 +241,20 @@
 
     // Document on load.
     $(function() {
-
         fullHeight();
         loaderPage();
         particleGround();
         fh5coTabs();
         gridAutoHeight();
-
         // sliderMain();
         // sliderSayings();
         offcanvasMenu();
         mainMenuSticky();
-        parallax();
         burgerMenu();
         scrolledWindow();
         mobileMenuOutsideClick();
         clickMenu();
         navigationSection();
         goToTop();
-
     });
-
-
 }());
