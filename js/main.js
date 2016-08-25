@@ -97,6 +97,7 @@
 
             if ($(window).scrollTop() > 1) {
                 $('.js-top').addClass('active');
+                // $('.fh5co-main-nav').animate({ backgroundColor: "white" }, "medium");
                 $('.fh5co-main-nav').addClass('main-nav-leavehome');
 
                 $('.fh5co-main-nav').css({
@@ -107,6 +108,7 @@
                 }).addClass('fh5co-shadow');
             } else {
                 $('.js-top').removeClass('active');
+                // $('.fh5co-main-nav').css({ backgroundColor: "transparent" });
                 $('.fh5co-main-nav').removeClass('main-nav-leavehome');
                 $('.fh5co-main-nav').removeClass('fh5co-shadow');
             }
