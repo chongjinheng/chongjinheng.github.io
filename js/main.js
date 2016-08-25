@@ -95,14 +95,10 @@
 		var lastScrollTop = 0;
 		$(window).scroll(function(){
 
-			var thisScrollTop = $(window).scrollTop();
-			if (thisScrollTop > 1) {
+			if ($(window).scrollTop() > 1) {
 				$('.js-top').addClass('active');
 			} else {
 				$('.js-top').removeClass('active');
-				if (thisScrollTop <= lastScrollTop) {
-						navActive('home');
-				}
 			}
 		});
 
@@ -278,17 +274,20 @@
 		var $section = $('div[data-section]');
 
 		$section.waypoint(function(direction) {
-		  	if (direction === 'down') {
-		    	navActive($(this.element).data('section'));
-		  	}
+				if (direction === 'down') {
+					navActive($(this.element).data('section'));
+				}
+		}, {
+				offset: '150px'
 		});
 
 		$section.waypoint(function(direction) {
-		  	if (direction === 'up') {
-		    	navActive($(this.element).data('section'));
-		  	}
+				if (direction === 'up') {
+					navActive($(this.element).data('section'));
+				}
+		}, {
+				offset: function() { return -$(this.element).height() + 155; }
 		});
-
 	};
 
 	// Document on load.
