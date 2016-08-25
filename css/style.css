@@ -340,10 +340,10 @@ p {
 }
 
 .fh5co-main-nav.fh5co-shadow {
-  -webkit-box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.09);
-  -moz-box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.09);
-  -ms-box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.09);
-  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.09);
+  -webkit-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
 }
 
 .fh5co-main-nav .fh5co-menu-1 {
