@@ -490,7 +490,9 @@ p {
 }
 
 #fh5co-about .fh5co-col-3 {
+  position: relative;
   width: 30%;
+  height: inherit;
 }
 
 @media screen and (max-width: 768px) {
@@ -547,28 +549,56 @@ p {
 }
 
 .fh5co-profile {
-  width: 100%;
-  height: 100%;
-  display: table;
-}
-
-.fh5co-profile .profile-container {
-  height: 100%;
-  display: table-cell;
-  vertical-align: middle;
+  position: absolute;
+  width: 65%;
+  height: 62%;
+  overflow: auto;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 .fh5co-profile img {
   display: block;
   max-width: 100%;
   max-height: 100%;
-  width: 240px;
-  padding-right: 20px;
+  width: 230px;
+}
+
+@media screen and (max-width: 992px) {
+  .fh5co-profile {
+    top: 20%;
+  }
+  .fh5co-profile img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: 230px;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .fh5co-profile {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    margin: -45px auto 60px;
+    display: table;
+  }
+  .fh5co-profile .profile-container {
+    height: 100%;
+    margin: auto;
+    display: table-cell;
+    vertical-align: middle;
+  }
   .fh5co-profile img {
-    margin: -30px auto 60px;
+    position: relative;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: 230px;
   }
 }
 
