@@ -20,14 +20,14 @@ body.fh5co-overflow {
 }
 
 a {
-  color: #69c2c8;
+  color: #121935;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 
 a:active, a:focus, a:hover {
-  color: #3da1a7;
+  color: black;
 }
 
 h1,
@@ -80,24 +80,24 @@ p {
 }
 
 .btn-primary {
-  background: #69c2c8;
+  background: #121935;
   color: #fff;
-  border: 2px solid #69c2c8;
+  border: 2px solid #121935;
 }
 
 .btn-primary:active, .btn-primary:hover {
-  background: #56bac1 !important;
-  border-color: #56bac1 !important;
+  background: #0c1022 !important;
+  border-color: #0c1022 !important;
 }
 
 .btn-primary.btn-outline {
-  color: #69c2c8;
+  color: #121935;
   background-color: transparent;
-  border: 2px solid #69c2c8;
+  border: 2px solid #121935;
 }
 
 .btn-primary.btn-outline:active, .btn-primary.btn-outline:hover {
-  background: #69c2c8;
+  background: #121935;
   color: #fff;
 }
 
@@ -216,7 +216,7 @@ p {
 .form-control:active, .form-control:focus {
   outline: none;
   box-shadow: none;
-  border-color: #69c2c8;
+  border-color: #121935;
 }
 
 .fh5co-page {
@@ -625,8 +625,8 @@ p {
 }
 
 .fh5co-tabs-container .fh5co-tabs li.active a {
-  color: #69c2c8;
-  border-bottom: 1px solid #69c2c8;
+  color: #121935;
+  border-bottom: 1px solid #121935;
 }
 
 @media screen and (max-width: 480px) {
@@ -738,7 +738,7 @@ p {
   float: left;
   width: 90px;
   height: 90px;
-  background: #69c2c8;
+  background: #121935;
   color: #fff;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -762,7 +762,7 @@ p {
 }
 
 #fh5co-skills .fh5co-video a:hover {
-  background: #57D131;
+  background: #4db8ff;
 }
 
 #fh5co-skills .fh5co-video a:active, #fh5co-skills .fh5co-video a:focus, #fh5co-skills .fh5co-video a:hover {
@@ -800,7 +800,7 @@ p {
 
 #fh5co-skills .service .icon i {
   font-size: 40px;
-  color: #57D131;
+  color: #4db8ff;
 }
 
 #fh5co-skills .service h3 {
@@ -808,7 +808,7 @@ p {
   font-size: 16px;
   font-weight: 500;
   text-transform: uppercase;
-  color: #368f95;
+  color: black;
 }
 
 #fh5co-skills .service:focus, #fh5co-skills .service:hover {
@@ -835,7 +835,7 @@ p {
   left: 0;
   top: 0.15em;
   font-size: 23px;
-  color: #57D131;
+  color: #4db8ff;
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -1001,7 +1001,7 @@ p {
   right: 0;
   left: 0;
   z-index: 0;
-  background: #69c2c8;
+  background: #121935;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: 0.1s;
@@ -1115,7 +1115,7 @@ p {
 }
 
 #fh5co-contact .form-control:active, #fh5co-contact .form-control:focus {
-  border-bottom: 1px solid #69c2c8;
+  border-bottom: 1px solid #121935;
 }
 
 #fh5co-footer {
@@ -1245,11 +1245,11 @@ p {
 #fh5co-offcanvas a:active, #fh5co-offcanvas a:focus, #fh5co-offcanvas a:hover {
   outline: none;
   text-decoration: none;
-  color: #69c2c8;
+  color: #121935;
 }
 
 #fh5co-offcanvas a.active {
-  color: #69c2c8;
+  color: #121935;
 }
 
 @media screen and (max-width: 768px) {
