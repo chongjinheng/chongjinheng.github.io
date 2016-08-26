@@ -81,18 +81,18 @@ p {
   border: 2px solid #69c2c8;
 }
 
-.btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+.btn-primary:active, .btn-primary:hover {
   background: #56bac1 !important;
   border-color: #56bac1 !important;
 }
 
 .btn-primary.btn-outline {
-  background: transparent;
   color: #69c2c8;
+  background-color: transparent;
   border: 2px solid #69c2c8;
 }
 
-.btn-primary.btn-outline:active, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:hover {
+.btn-primary.btn-outline:active, .btn-primary.btn-outline:hover {
   background: #69c2c8;
   color: #fff;
 }

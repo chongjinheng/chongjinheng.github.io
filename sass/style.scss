@@ -136,17 +136,15 @@ p {
     color: $brand-white;
     border: 2px solid $brand-primary;
     &:active,
-    &:focus,
     &:hover {
         background: darken($brand-primary, 5%)!important;
         border-color: darken($brand-primary, 5%)!important;
     }
     &.btn-outline {
-        background: transparent;
         color: $brand-primary;
+        background-color: transparent;
         border: 2px solid $brand-primary;
         &:active,
-        &:focus,
         &:hover {
             background: $brand-primary;
             color: $brand-white;
