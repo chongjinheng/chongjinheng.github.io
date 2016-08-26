@@ -107,6 +107,12 @@ h6 {
 p {
     margin-bottom: 30px;
 }
+
+// Animation
+.animate-on-scroll {
+    opacity:0;
+}
+
 // Buttons
 .btn {
     margin-right: 4px;
@@ -970,7 +976,7 @@ p {
     }
 }
 #fh5co-footer {
-    padding: 3em 0;
+    padding: 1em 0;
     background: #E8ECF1;
     -webkit-box-shadow: inset 0 10px 21px -15px rgba(0,0,0,0.12);
     -moz-box-shadow: inset 0 10px 21px -15px rgba(0,0,0,0.12);
@@ -984,6 +990,8 @@ p {
         }
     }
     .fh5co-social {
+        @include inline-block;
+        margin-top: 0px;
         float: right;
         text-align: left;
         @media screen and (max-width: $screen-sm) {

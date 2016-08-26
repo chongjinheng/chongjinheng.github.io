@@ -45,6 +45,10 @@ p {
   margin-bottom: 30px;
 }
 
+.animate-on-scroll {
+  opacity: 0;
+}
+
 .btn {
   margin-right: 4px;
   margin-bottom: 4px;
@@ -1115,7 +1119,7 @@ p {
 }
 
 #fh5co-footer {
-  padding: 3em 0;
+  padding: 1em 0;
   background: #E8ECF1;
   -webkit-box-shadow: inset 0 10px 21px -15px rgba(0, 0, 0, 0.12);
   -moz-box-shadow: inset 0 10px 21px -15px rgba(0, 0, 0, 0.12);
@@ -1133,6 +1137,11 @@ p {
 }
 
 #fh5co-footer .fh5co-social {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  margin-top: 0px;
   float: right;
   text-align: left;
 }

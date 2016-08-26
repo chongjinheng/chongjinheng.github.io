@@ -1,4 +1,3 @@
-;
 (function() {
     'use strict';
     // iPad and iPod detection
@@ -18,27 +17,27 @@
             $('.js-fullheight-home').css('height', $(window).height());
             $(window).resize(function() {
                 $('.js-fullheight-home').css('height', $(window).height());
-            })
+            });
         }
     };
 
     // Loading page
-    var loaderPage = function () {
+    var loaderPage = function() {
         $(".fh5co-loader").fadeOut("slow");
     };
 
     // Particle ground effect
-    var particleGround = function () {
+    var particleGround = function() {
         $('#particle-ground').particleground({
             parallax: true,
             dotColor: '#a5abc0',
             lineColor: '#969db6'
         });
-    }
+    };
 
-    var fh5coTabs = function () {
+    var fh5coTabs = function() {
         // $('.fh5co-tabs-container').
-        $('.fh5co-tabs li a').click (function(event) {
+        $('.fh5co-tabs li a').click(function(event) {
             event.preventDefault();
             var $this = $(this),
                 tab = $this.data('tab');
@@ -47,7 +46,7 @@
             $this.closest('.fh5co-tabs-container').find('.fh5co-tab-content').removeClass('active');
             $this.closest('.fh5co-tabs-container').find('.fh5co-tab-content[data-tab-content="' + tab + '"]').addClass('active');
         });
-    }
+    };
 
     var gridAutoHeight = function() {
         if (!isiPhone() || !isiPad()) {
@@ -58,18 +57,18 @@
                 $('.fh5co-grid-item').css('height', $('.fh5co-2col-inner').outerHeight() / 2);
             }
         });
-    }
+    };
 
-    var sliderSayings = function() {
-        $('#fh5co-sayings .flexslider').flexslider({
-            animation: "slide",
-            slideshowSpeed: 5000,
-            directionNav: false,
-            controlNav: true,
-            smoothHeight: true,
-            reverse: true
-        });
-    }
+    // var sliderSayings = function() {
+    //     $('#fh5co-sayings .flexslider').flexslider({
+    //         animation: "slide",
+    //         slideshowSpeed: 5000,
+    //         directionNav: false,
+    //         controlNav: true,
+    //         smoothHeight: true,
+    //         reverse: true
+    //     });
+    // }
 
     var offcanvasMenu = function() {
         $('body').prepend('<div id="fh5co-offcanvas" />');
@@ -98,11 +97,14 @@
                     'width': '100%',
                     'z-index': 99999
                 }).addClass('fh5co-shadow');
+
+                $('#down-arrow').hide();
             } else {
                 $('.js-top').removeClass('active');
                 // $('.fh5co-main-nav').css({ backgroundColor: "transparent" });
                 $('.fh5co-main-nav').removeClass('main-nav-leavehome');
                 $('.fh5co-main-nav').removeClass('fh5co-shadow');
+                $('#down-arrow').show();
             }
         });
     };
@@ -206,13 +208,13 @@
     };
 
     // Reflect scrolling in navigation
-    var navActive = function (section) {
+    var navActive = function(section) {
         $('.fh5co-main-nav a[data-nav-section], #fh5co-offcanvas a[data-nav-section]').removeClass('active');
         $('.fh5co-main-nav, #fh5co-offcanvas').find('a[data-nav-section="' + section + '"]').addClass('active');
 
     };
 
-    var navigationSection = function () {
+    var navigationSection = function() {
         var $section = $('div[data-section]');
 
         $section.waypoint(function(direction) {
@@ -223,19 +225,41 @@
             offset: '150px'
         });
 
-        $section.waypoint(function (direction) {
+        $section.waypoint(function(direction) {
             if (direction === 'up') {
                 navActive($(this.element).data('section'));
             }
         }, {
-            offset: function () {
+            offset: function() {
                 return -$(this.element).height() + 155;
             }
         });
     };
 
+    var fadeInOnScroll = function() {
+
+        /* Every time the window is scrolled ... */
+        $(window).scroll(function() {
+
+            /* Check the location of each desired element */
+            $('.animate-on-scroll').each(function(i) {
+
+                var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+                var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+                /* If the object is completely visible in the window, fade it it */
+                if (bottom_of_window > bottom_of_object) {
+                    $(this).addClass('animated fadeInUp');
+                    // $(this).animate({
+                    //     'opacity': '1'
+                    // }, 1000);
+                }
+            });
+        });
+    };
+
     // Document on load.
-    $(function () {
+    $(function() {
         fullHeight();
         loaderPage();
         particleGround();
@@ -250,6 +274,7 @@
         mobileMenuOutsideClick();
         clickNavigations();
         navigationSection();
+        fadeInOnScroll();
         goToTop();
     });
 }());
