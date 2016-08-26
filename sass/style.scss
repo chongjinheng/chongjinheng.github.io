@@ -496,7 +496,7 @@ p {
         }
     }
     .fh5co-2col-inner {
-        padding: 2em 0;
+        padding: 1.5em 0;
         width: 735px;
         margin-right: 10%;
         margin-left: auto;
@@ -660,9 +660,9 @@ p {
         }
     }
 }
-#fh5co-services {
+#fh5co-skills {
+    padding: 3em 0;
     position: relative;
-    padding-top: 60px;
     @media screen and (max-width: $screen-sm) {
         padding: 5em 0 3em;
     }
@@ -849,11 +849,11 @@ p {
         }
     }
 }
-#fh5co-gallery {
+#fh5co-projects {
     clear: both;
     float: left;
     width: 100%;
-    margin-bottom: 80px;
+    margin-bottom: 2em;
     .fh5co-item {
         display: block;
         position: relative;
@@ -955,7 +955,8 @@ p {
     }
 }
 #fh5co-contact {
-    padding: 7em 0;
+    clear: both;
+    padding: 2em 0;
     @media screen and (max-width: $screen-sm) {
         padding: 3em 0;
     }
