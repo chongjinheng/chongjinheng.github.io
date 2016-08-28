@@ -677,12 +677,29 @@ p {
   margin: auto;
 }
 
+.fh5co-tabs-container .fh5co-tab-content h1 {
+  font-size: 28px;
+  margin-bottom: 0px;
+  color: #5a5a5a;
+}
+
 .fh5co-tabs-container .fh5co-tab-content h2 {
   font-size: 20px;
   font-weight: 300;
   line-height: 1.8;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   color: #7b7b7b;
+}
+
+.fh5co-tabs-container .fh5co-tab-content h3 {
+  margin-top: 0px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #7b7b7b;
+}
+
+.fh5co-tabs-container .fh5co-tab-content .company-name {
+  margin-top: 0px;
 }
 
 .fh5co-tabs-container .fh5co-tab-content.active {

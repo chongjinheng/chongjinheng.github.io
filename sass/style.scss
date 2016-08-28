@@ -726,12 +726,29 @@ p {
         }
         @include transition(.5s);
 
+        h1 {
+          font-size: 28px;
+          margin-bottom: 0px;
+          color: lighten(#404040, 10%);
+        }
+
         h2 {
             font-size: 20px;
             font-weight: 300;
             line-height: 1.8;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             color: darken(#949494, 10%);
+        }
+
+        h3 {
+          margin-top: 0px;
+          font-size: 16px;
+          font-weight: 300;
+          color: darken(#949494, 10%);
+        }
+
+        .company-name {
+          margin-top: 0px;
         }
 
         &.active {
