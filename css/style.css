@@ -1013,7 +1013,7 @@ p {
 #fh5co-projects .fh5co-item {
   display: block;
   position: relative;
-  width: 25%;
+  width: 33.33%;
   z-index: 2;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1116,29 +1116,28 @@ p {
   bottom: -10px;
 }
 
-#fh5co-projects .fh5co-item:active, #fh5co-projects .fh5co-item:focus, #fh5co-projects .fh5co-item:hover {
+#fh5co-projects .fh5co-item:active, #fh5co-projects .fh5co-item:hover {
   background-size: cover;
   text-decoration: none;
 }
 
-#fh5co-projects .fh5co-item:active .fh5co-overlay, #fh5co-projects .fh5co-item:focus .fh5co-overlay, #fh5co-projects .fh5co-item:hover .fh5co-overlay {
+#fh5co-projects .fh5co-item:active .fh5co-overlay, #fh5co-projects .fh5co-item:hover .fh5co-overlay {
   opacity: 0.8;
   visibility: visible;
 }
 
 #fh5co-projects .fh5co-item:active .fh5co-copy-inner h2,
-#fh5co-projects .fh5co-item:active .fh5co-copy-inner h3, #fh5co-projects .fh5co-item:focus .fh5co-copy-inner h2,
-#fh5co-projects .fh5co-item:focus .fh5co-copy-inner h3, #fh5co-projects .fh5co-item:hover .fh5co-copy-inner h2,
+#fh5co-projects .fh5co-item:active .fh5co-copy-inner h3, #fh5co-projects .fh5co-item:hover .fh5co-copy-inner h2,
 #fh5co-projects .fh5co-item:hover .fh5co-copy-inner h3 {
   opacity: 1;
   visibility: visible;
 }
 
-#fh5co-projects .fh5co-item:active .fh5co-copy-inner h2, #fh5co-projects .fh5co-item:focus .fh5co-copy-inner h2, #fh5co-projects .fh5co-item:hover .fh5co-copy-inner h2 {
+#fh5co-projects .fh5co-item:active .fh5co-copy-inner h2, #fh5co-projects .fh5co-item:hover .fh5co-copy-inner h2 {
   top: 0;
 }
 
-#fh5co-projects .fh5co-item:active .fh5co-copy-inner h3, #fh5co-projects .fh5co-item:focus .fh5co-copy-inner h3, #fh5co-projects .fh5co-item:hover .fh5co-copy-inner h3 {
+#fh5co-projects .fh5co-item:active .fh5co-copy-inner h3, #fh5co-projects .fh5co-item:hover .fh5co-copy-inner h3 {
   bottom: 0;
 }
 
