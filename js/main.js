@@ -258,6 +258,43 @@
         });
     };
 
+    function validateEmail(email) {
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    }
+
+    var submitMessageForm = function() {
+        var name = $('#name').val();
+        var email = $('#email').val();
+        var message = $('#message').val();
+        if ((name !== "") && (email !== "") && ((message !== "") && (validateEmail(email)))) {
+            $j.ajax({
+                url: "https://docs.google.com/forms/d/e/1FAIpQLScwrNZWUuLWfrHgT7XuCe9upEgrAJq5Bd6QcBUgZ69Ro3X8eA/formResponse",
+                data: {"entry.1" : name, "entry.3" : email, "entry.4": message},
+                type: "POST",
+                dataType: "xml",
+                statusCode: {
+                    0: function (){
+
+                        $('#name').val("");
+                        $('#email').val("");
+                        $('#message').val("");
+                        //Success message
+                    },
+                    200: function (){
+                        $('#name').val("");
+                        $('#email').val("");
+                        $('#message').val("");
+                        //Success Message
+                    }
+                }
+            });
+        }
+        else {
+            //Error message
+        }
+    }
+
     // Document on load.
     $(function() {
         fullHeight();
@@ -275,6 +312,7 @@
         clickNavigations();
         navigationSection();
         fadeInOnScroll();
+        submitMessageForm();
         goToTop();
     });
 }());
