@@ -312,7 +312,6 @@
         clickNavigations();
         navigationSection();
         fadeInOnScroll();
-        submitMessageForm();
         goToTop();
     });
 }());
