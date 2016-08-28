@@ -1302,6 +1302,12 @@ p {
 }
 
 @media screen and (max-width: 768px) {
+  #fh5co-offcanvas a.active {
+    color: #fff;
+  }
+}
+
+@media screen and (max-width: 768px) {
   #fh5co-offcanvas {
     display: block;
   }

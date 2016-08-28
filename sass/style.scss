@@ -1271,6 +1271,9 @@ p {
 
         &.active {
             color: $brand-primary;
+            @media screen and (max-width: $screen-sm) {
+              color: #fff;
+            }
         }
     }
     @include fh5co-translate(-275px);
