@@ -264,35 +264,37 @@
     }
 
     var submitMessageForm = function() {
-        var name = $('#name').val();
-        var email = $('#email').val();
-        var message = $('#message').val();
-        if ((name !== "") && (email !== "") && ((message !== "") && (validateEmail(email)))) {
-            $j.ajax({
-                url: "https://docs.google.com/forms/d/e/1FAIpQLScwrNZWUuLWfrHgT7XuCe9upEgrAJq5Bd6QcBUgZ69Ro3X8eA/formResponse",
-                data: {"entry.1" : name, "entry.3" : email, "entry.4": message},
-                type: "POST",
-                dataType: "xml",
-                statusCode: {
-                    0: function (){
 
-                        $('#name').val("");
-                        $('#email').val("");
-                        $('#message').val("");
-                        //Success message
+        $('#submitBtn').click(function() {
+            var name = $('#name').val();
+            var email = $('#email').val();
+            var message = $('#message').val();
+            if ((name !== "") && (email !== "") && ((message !== "") && (validateEmail(email)))) {
+                $.ajax({
+                    url: "https://docs.google.com/forms/d/e/1FAIpQLScwrNZWUuLWfrHgT7XuCe9upEgrAJq5Bd6QcBUgZ69Ro3X8eA/formResponse",
+                    data: {
+                        "entry.1293050557": name,
+                        "entry.1206154886": email,
+                        "entry.1692134080": message
                     },
-                    200: function (){
-                        $('#name').val("");
-                        $('#email').val("");
-                        $('#message').val("");
-                        //Success Message
+                    type: "POST",
+                    dataType: "xml",
+                    statusCode: {
+                        0: function() {
+                            alert('Thank you for your response!');
+                            //Success message
+                        },
+                        200: function() {
+                            alert('Thank you for your response!');
+                            //Success Message
+                        }
                     }
-                }
-            });
-        }
-        else {
-            //Error message
-        }
+                });
+            } else {
+              alert('There is something wrong with the system, please try again');
+                //Error message
+            }
+        })
     }
 
     // Document on load.
@@ -312,6 +314,7 @@
         clickNavigations();
         navigationSection();
         fadeInOnScroll();
+        submitMessageForm();
         goToTop();
     });
 }());
